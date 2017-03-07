@@ -4,19 +4,22 @@
 
 // Comportement par référence
 // Possibilité d'héritage
-class Restaurant {
+struct Restaurant {
     
-    var name = ""
-    var address = ""
+    var name: String
+    var address: String
     
-    var isVisited = false
-    var grade = 0
-    var menu = [Plat]()
+    var isVisited: Bool
+    
+    var grade: Int?
+//    var grade: Optional<Int>
+    
+    var menu: [Plat]
 }
 
-class FoodTruck: Restaurant {
-    var localisation: String = ""
-}
+//class FoodTruck: Restaurant {
+//    var localisation: String = ""
+//}
 
 // Comportement par copie (value type)
 struct Plat {
@@ -57,42 +60,13 @@ let salade = Plat(name: "Salade", details: "Salade", price: 10)
 Plat.usdEurRate = 1.2
 
 // Instance de class let -> Possibilité de changer les membres var
-let resto = Restaurant()
-resto.grade = 10
+//let resto = Restaurant()
+//resto.grade = 10
 //resto = Restaurant()
 
 
 var salade1 = Plat(name: "Salade", details: "Salade", price: 10)
 var salade2 = salade1
-
-salade1.price = 20
-salade1.priceUSD
-salade1.priceSEK = 1000
-//salade1.priceUSD = 1000 Impossible car Get-Only
-
-
-salade1.price
-salade2.price
-
-let r1 = Restaurant()
-r1.name = "1"
-
-var r2 = r1
-
-r1.name = "10"
-
-r1.name
-r2.name
-
-
-
-var a = 5
-var b = a
-
-a = 8
-
-a
-b
 
 class RestaurantDirectory {
     
@@ -106,7 +80,7 @@ class RestaurantDirectory {
         return directory
     }
     
-    func mange(_ aliment: Plat, dans lieu: FoodTruck = FoodTruck(), avec pote: String = "") {
+    func mange(_ aliment: Plat, dans lieu: String = "", avec pote: String = "") {
         
         print("Je mange aliment dans dans")
         print("A", "B", separator: "-", terminator: ",")
@@ -114,41 +88,31 @@ class RestaurantDirectory {
 }
 
 
-let dir = RestaurantDirectory()
-dir.add(resto)
-
-
-dir.mange(salade, dans: FoodTruck(), avec: "Toto")
-dir.mange(salade, dans: FoodTruck())
-
-dir.mange(salade, avec: "Toto")
-
-func load(url: String) -> (code: Int, message: String) {
-    
-    return (200, "OK")
-}
-
-let result = load(url: "")
-result.message
-
-var ratios = (x: 1, y: 2)
-ratios.x = 2
-ratios
-
-
-
-
 // Réfléchir sur la possibilité de ne pas noter un resto si pas visité
     // Utiliser une erreur, via une methode
         // Empecher l'accès direct
 
-// Ajouter un "remove restaurant" comme méthode dans le directory
-// Empecher l'utilisation du tableau du Directory
+// Ajouter un "remove restaurant" comme méthode dans le directory -> Protocoles
+// Empecher l'utilisation du tableau du Directory -> Visibilité
 
-r1.isVisited
-r1.grade
+let resto = Restaurant(name: "Toto", address: "1 Rue de la Paix", isVisited: false, grade: nil, menu: [])
+let dir = RestaurantDirectory()
+dir.add(resto)
 
 
+dir.mange(salade, dans: "", avec: "Toto")
+dir.mange(salade, dans: "")
+
+dir.mange(salade, avec: "Toto")
+
+if let note = resto.grade {
+    let x2 = note * 2
+} else {
+    
+}
+
+guard let note = resto.grade else { fatalError("bad things happen") }
+let x2 = note * 2
 
 
 
