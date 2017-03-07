@@ -70,7 +70,7 @@ var salade2 = salade1
 
 class RestaurantDirectory {
     
-    var directory = [Restaurant]()
+    private var directory = [Restaurant]()
     
     func add(_ restaurant: Restaurant) {
         directory.append(restaurant)
@@ -92,10 +92,10 @@ class RestaurantDirectory {
     // Utiliser une erreur, via une methode
         // Empecher l'accès direct
 
+// Empecher l'utilisation du tableau du Directory -> Visibilité-
 // Ajouter un "remove restaurant" comme méthode dans le directory -> Protocoles
-// Empecher l'utilisation du tableau du Directory -> Visibilité
 
-let resto = Restaurant(name: "Toto", address: "1 Rue de la Paix", isVisited: false, grade: nil, menu: [])
+let resto = Restaurant(name: "Toto", address: "1 Rue de la Paix", isVisited: false, grade: 0, menu: [])
 let dir = RestaurantDirectory()
 dir.add(resto)
 
@@ -105,6 +105,7 @@ dir.mange(salade, dans: "")
 
 dir.mange(salade, avec: "Toto")
 
+
 if let note = resto.grade {
     let x2 = note * 2
 } else {
@@ -113,7 +114,6 @@ if let note = resto.grade {
 
 guard let note = resto.grade else { fatalError("bad things happen") }
 let x2 = note * 2
-
 
 
 
