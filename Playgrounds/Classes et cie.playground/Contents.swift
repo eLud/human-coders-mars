@@ -4,7 +4,7 @@
 
 // Comportement par référence
 // Possibilité d'héritage
-struct Restaurant {
+struct Restaurant: Hashable, CustomStringConvertible  {
     
     var name: String
     var address: String
@@ -15,6 +15,21 @@ struct Restaurant {
 //    var grade: Optional<Int>
     
     var menu: [Plat]
+    
+    static func ==(lhs: Restaurant, rhs: Restaurant) -> Bool {
+        if rhs.name == lhs.name && rhs.address == lhs.address {
+            return true
+        }
+        return false
+    }
+    
+    var hashValue: Int {
+        return (name + address).hashValue
+    }
+    
+    var description: String {
+        return "Le resto \(name) est à l'adresse \(address)"
+    }
 }
 
 //class FoodTruck: Restaurant {
@@ -80,6 +95,12 @@ class RestaurantDirectory {
         return directory
     }
     
+    func remove(restaurant: Restaurant) {
+        
+        guard let index = directory.index(of: restaurant) else { return }
+        directory.remove(at: index)
+    }
+    
     func mange(_ aliment: Plat, dans lieu: String = "", avec pote: String = "") {
         
         print("Je mange aliment dans dans")
@@ -115,9 +136,14 @@ if let note = resto.grade {
 guard let note = resto.grade else { fatalError("bad things happen") }
 let x2 = note * 2
 
+// == compare les valeurs
+// === compare l'identité (donc objects uniquement)
 
+var set: Set<Restaurant> = [resto]
 
+set.count
 
+set.insert(resto)
 
-
+print("\(resto)")
 
