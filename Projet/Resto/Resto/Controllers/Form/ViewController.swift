@@ -53,9 +53,7 @@ class ViewController: UIViewController {
             
         } catch FormError.textFieldIsEmpty (let tf){
             
-            UIView.animate(withDuration: 0.4, delay: 0, options: [.autoreverse], animations: {
-                tf.backgroundColor = UIColor.red
-            }, completion: nil)
+            tf.warn()
             
             let alert = UIAlertController(title: "Champs de texte vide", message: "Rempli ton formulaire", preferredStyle: .actionSheet)
             
