@@ -49,4 +49,12 @@ class RestaurantDirectory {
             add(r)
         }
     }
+    
+    typealias listnerClosure = (String) -> Void
+    
+    var tab: [listnerClosure] = []
+    func toto(callback: @escaping listnerClosure) {
+        
+        tab.append(callback)
+    }
 }
