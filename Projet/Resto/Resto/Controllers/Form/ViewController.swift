@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var noteStackView: UIStackView!
     @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var noteSlider: UISlider!
+    @IBOutlet weak var visitedSwitch: UISwitch!
     
-    var directry = RestaurantDirectory()
+    var directory = RestaurantDirectory()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +34,27 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
-        noteLabel.text = "\(sender.value)"
+        let note = Int(round(sender.value))
+        noteLabel.text = "\(note)"
     }
     
     @IBAction func enregistre(_ sender: UIButton) {
-        print("toto")
+        guard let name = nameTextField.text, !name.isEmpty else {
+            return
+        }
+        guard let address = addressTextField.text, !address.isEmpty else {
+            return
+        }
+        
+        var note: Int? = nil
+            
+        if visitedSwitch.isOn {
+            note = Int(round(noteSlider.value))
+        }
+        
+        let resto = Restaurant(name: name, address: address, isVisited: visitedSwitch.isOn, style: [], grade: note, menu: [])
+        
+        directory.add(resto)
 
     }
     
@@ -54,8 +72,6 @@ class ViewController: UIViewController {
         father?.children = son
         son.father = father
     }
-
-
 }
 
 fileprivate class Human {
@@ -75,20 +91,3 @@ fileprivate class Human {
         print("\(name) is dead")
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -121,7 +120,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Con-Lp-eFr">
+                                            <slider contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Con-Lp-eFr">
                                                 <rect key="frame" x="43" y="0.0" width="288.66666666666669" height="31"/>
                                                 <connections>
                                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="dXt-fi-mfn"/>
@@ -186,7 +185,9 @@
                         <outlet property="addressTextField" destination="QRh-7O-j7I" id="bxu-W6-bci"/>
                         <outlet property="nameTextField" destination="fPe-6V-dUX" id="aah-09-OBV"/>
                         <outlet property="noteLabel" destination="s4M-9B-xbd" id="EMD-He-scd"/>
+                        <outlet property="noteSlider" destination="Con-Lp-eFr" id="Nmx-dS-Q9T"/>
                         <outlet property="noteStackView" destination="wCc-I9-6TI" id="Kg5-Ad-mFk"/>
+                        <outlet property="visitedSwitch" destination="pRx-av-NOO" id="z0S-kZ-DGt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
