@@ -44,27 +44,43 @@ class ViewController: UIViewController {
     }
     
     @IBAction func enregistre(_ sender: UIButton) {
-        guard let name = nameTextField.text, !name.isEmpty else {
-            return
-        }
-        guard let address = addressTextField.text, !address.isEmpty else {
+        
+        let result = try? restaurantFromForm()
+        
+        guard let resto = result else {
+            // Y'a un soucis dans le formulaire
             return
         }
         
+        directory.add(resto)
+    }
+    
+    @IBAction func cancel(_ sender: UIButton) {
+    }
+    
+    private func restaurantFromForm() throws -> Restaurant {
+        
+        guard let name = nameTextField.text, !name.isEmpty else {
+            throw FormError.textFieldIsEmpty
+        }
+// Chainage de guard
+//        guard let tf = nameTextField, let name2 = tf.text, !name2.isEmpty else {
+//            return nil
+//        }
+        
+        guard let address = addressTextField.text, !address.isEmpty else {
+            throw FormError.textFieldIsEmpty
+        }
+        
         var note: Int? = nil
-            
+        
         if visitedSwitch.isOn {
             note = Int(round(noteSlider.value))
         }
         
         let resto = Restaurant(name: name, address: address, isVisited: visitedSwitch.isOn, style: [], grade: note, menu: [])
         
-        directory.add(resto)
-
-    }
-    
-    @IBAction func cancel(_ sender: UIButton) {
-    
+        return resto
     }
     
     fileprivate var father: Human?
