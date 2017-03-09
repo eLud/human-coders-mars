@@ -9,9 +9,9 @@
 import UIKit
 
 enum FormError: Error {
-    case textFieldIsEmpty
+    case textFieldIsEmpty (textField: UITextField)
     case textIsNotLongEnough
-    case undefined
+    case undefined (view: UIView?)
     case anotherUndefinedError
 }
 
@@ -50,7 +50,8 @@ class ViewController: UIViewController {
         do {
             let resto = try restaurantFromForm()
             directory.add(resto)
-        } catch FormError.textFieldIsEmpty {
+            
+        } catch FormError.textFieldIsEmpty (let tf){
             
             let alert = UIAlertController(title: "Champs de texte vide", message: "Rempli ton formulaire", preferredStyle: .actionSheet)
             
@@ -73,7 +74,7 @@ class ViewController: UIViewController {
             present(alert, animated: true, completion: nil)
             
         } catch FormError.textIsNotLongEnough {
-            
+        
         } catch {
             
         }
@@ -85,7 +86,7 @@ class ViewController: UIViewController {
     private func restaurantFromForm() throws -> Restaurant {
         
         guard let name = nameTextField.text, !name.isEmpty else {
-            throw FormError.textFieldIsEmpty
+            throw FormError.textFieldIsEmpty(textField: nameTextField)
         }
 // Chainage de guard
 //        guard let tf = nameTextField, let name2 = tf.text, !name2.isEmpty else {
@@ -93,7 +94,7 @@ class ViewController: UIViewController {
 //        }
         
         guard let address = addressTextField.text, !address.isEmpty else {
-            throw FormError.textFieldIsEmpty
+            throw FormError.textFieldIsEmpty(textField: addressTextField)
         }
         
         var note: Int? = nil
