@@ -17,11 +17,18 @@ class RestaurantListCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        collectionView?.reloadData()
     }
 
     /*
@@ -62,6 +69,7 @@ class RestaurantListCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
@@ -91,4 +99,12 @@ class RestaurantListCollectionViewController: UICollectionViewController {
     }
     */
 
+}
+
+extension RestaurantListCollectionViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width
+         return CGSize(width: width, height: 100)
+    }
 }
