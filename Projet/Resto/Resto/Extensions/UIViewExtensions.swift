@@ -11,8 +11,25 @@ import UIKit
 extension UIView {
     
     func warn() {
-        UIView.animate(withDuration: 0.4, delay: 0, options: [.autoreverse], animations: {
-            self.backgroundColor = UIColor.red
+        let originalColor = self.backgroundColor
+        UIView.animateKeyframes(withDuration: 1, delay: 0, options: [], animations: {
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.25, animations: {
+                self.backgroundColor = UIColor.red
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25, animations: {
+                self.backgroundColor = originalColor
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.25, animations: {
+                self.backgroundColor = UIColor.red
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25, animations: {
+                self.backgroundColor = originalColor
+            })
+            
         }, completion: nil)
     }
 }
