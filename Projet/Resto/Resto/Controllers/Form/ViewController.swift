@@ -52,29 +52,7 @@ class ViewController: UIViewController {
             directory.add(resto)
             
         } catch FormError.textFieldIsEmpty (let tf){
-            
             tf.warn()
-            
-            let alert = UIAlertController(title: "Champs de texte vide", message: "Rempli ton formulaire", preferredStyle: .actionSheet)
-            
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                print("OK")
-            })
-            
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-                print("Cancel")
-            })
-            
-            let destroyAction = UIAlertAction(title: "Destroy", style: .destructive, handler: { (action) in
-                print("Destroyed")
-            })
-            
-            alert.addAction(okAction)
-            alert.addAction(cancelAction)
-            alert.addAction(destroyAction)
-            
-//            present(alert, animated: true, completion: nil)
-            
         } catch FormError.textIsNotLongEnough {
         
         } catch {
