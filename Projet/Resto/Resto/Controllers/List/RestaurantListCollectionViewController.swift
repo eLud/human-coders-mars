@@ -47,12 +47,7 @@ class RestaurantListCollectionViewController: UICollectionViewController {
     
         if let c = cell as? RestaurantCollectionViewCell {
             let resto = RestaurantDirectory.shared.list()[indexPath.row]
-            
-            c.nameLabel.text = resto.name
-            c.addressLabel.text = resto.address
-            if let firstStyle = resto.style.first?.rawValue {
-                c.styleLabel.text = firstStyle
-            }
+            c.configureCell(with: resto)
         }
     
         if indexPath.row%2 == 0 {
