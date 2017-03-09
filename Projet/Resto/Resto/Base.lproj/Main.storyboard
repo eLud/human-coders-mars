@@ -75,23 +75,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROd-DZ-mo3">
-                                            <rect key="frame" x="8" y="8" width="123" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROd-DZ-mo3">
+                                            <rect key="frame" x="8" y="8" width="36.333333333333336" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adresse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODz-dt-eCp">
-                                            <rect key="frame" x="0.0" y="105" width="142" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adresse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODz-dt-eCp">
+                                            <rect key="frame" x="8" y="121" width="62" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-eQ-hoO">
-                                            <rect key="frame" x="9" y="55" width="133" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-eQ-hoO">
+                                            <rect key="frame" x="8" y="64.666666666666671" width="38.333333333333336" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -99,6 +96,14 @@
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.3921568627" green="0.81568627449999997" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ROd-DZ-mo3" firstAttribute="leading" secondItem="HXD-h1-D8j" secondAttribute="leadingMargin" id="5WQ-TU-vbY"/>
+                                    <constraint firstItem="8eG-eQ-hoO" firstAttribute="leading" secondItem="HXD-h1-D8j" secondAttribute="leadingMargin" id="Lzt-i0-ms2"/>
+                                    <constraint firstItem="ROd-DZ-mo3" firstAttribute="top" secondItem="HXD-h1-D8j" secondAttribute="topMargin" id="Qsv-nr-id3"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="ODz-dt-eCp" secondAttribute="bottom" id="RDE-s7-d59"/>
+                                    <constraint firstItem="8eG-eQ-hoO" firstAttribute="centerY" secondItem="HXD-h1-D8j" secondAttribute="centerY" id="gK5-56-Xwk"/>
+                                    <constraint firstItem="ODz-dt-eCp" firstAttribute="leading" secondItem="HXD-h1-D8j" secondAttribute="leadingMargin" id="oJz-Zk-kZt"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="addressLabel" destination="ODz-dt-eCp" id="lAx-wV-8mx"/>
                                     <outlet property="nameLabel" destination="ROd-DZ-mo3" id="hSx-ac-3Yq"/>
