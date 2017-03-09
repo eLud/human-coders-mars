@@ -87,6 +87,29 @@ fileprivate class Human {
         self.profilePicture = picture
     }
     
+    func open(file: String) {
+        
+        // Ouvre le fichier
+        
+        //Executé en sortie de scope, en FILO si plusieurs déclarés
+        defer {
+            //ferme le fichier
+            toto = "fini"
+        }
+        
+        var toto = ""
+        
+        guard file.characters.count < 45 else {
+            return
+        }
+        guard file.hasPrefix("") else {
+            return
+        }
+        guard file.hasSuffix("") else {
+            return
+        }
+    }
+    
     deinit {
         print("\(name) is dead")
     }
