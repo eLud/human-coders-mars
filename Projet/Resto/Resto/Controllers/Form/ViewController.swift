@@ -45,14 +45,14 @@ class ViewController: UIViewController {
     
     @IBAction func enregistre(_ sender: UIButton) {
         
-        let result = try? restaurantFromForm()
+        let result = try! restaurantFromForm()
         
-        guard let resto = result else {
-            // Y'a un soucis dans le formulaire
-            return
-        }
+//        guard let resto = result else {
+//            // Y'a un soucis dans le formulaire
+//            return
+//        }
         
-        directory.add(resto)
+        directory.add(result)
     }
     
     @IBAction func cancel(_ sender: UIButton) {
