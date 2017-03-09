@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var noteSlider: UISlider!
     @IBOutlet weak var visitedSwitch: UISwitch!
     
-    var directory = RestaurantDirectory()
+    var directory = RestaurantDirectory.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()

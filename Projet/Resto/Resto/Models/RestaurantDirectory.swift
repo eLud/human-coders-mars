@@ -10,7 +10,13 @@ import Foundation
 
 class RestaurantDirectory {
     
-    private var directory = [Restaurant]()
+    static let shared = RestaurantDirectory()
+    
+    private var directory: [Restaurant]
+    
+    private init() {
+        directory = []
+    }
     
     /// This adds a restaurant to the directory
     /// - parameter restaurant
