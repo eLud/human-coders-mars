@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         do {
             let resto = try restaurantFromForm()
             directory.add(resto)
-            
+            dismiss(animated: true, completion: nil)
         } catch FormError.textFieldIsEmpty (let tf){
             tf.warn()
         } catch FormError.textIsNotLongEnough {
@@ -61,6 +61,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cancel(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
     }
     
     private func restaurantFromForm() throws -> Restaurant {
