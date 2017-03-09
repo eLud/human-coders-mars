@@ -26,5 +26,5 @@ struct Dessert: Menuable {
         }
     }
     
-    static var usdEurRate: Float = 1.2
+    static var usdEurRate: Float = 1.3
 }

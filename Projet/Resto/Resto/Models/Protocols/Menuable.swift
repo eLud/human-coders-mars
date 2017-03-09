@@ -16,13 +16,17 @@ protocol Menuable {
     var priceUSD: Float { get }
     var priceSEK: Float { get }
     
-    static var usdEurRate: Float { get set }
+    static var usdEurRate: Float { get }
 }
 
 extension Menuable {
     
     var priceUSD: Float {
         return price * Self.usdEurRate
+    }
+    
+    static var usdEurRate: Float {
+        return 1.2
     }
     
     var priceSEK: Float {

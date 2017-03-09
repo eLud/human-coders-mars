@@ -13,6 +13,4 @@ struct Plat: Menuable {
     let name: String
     let details: String
     var price: Float
-    
-    static var usdEurRate: Float = 1.2
 }
