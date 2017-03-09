@@ -53,6 +53,10 @@ class ViewController: UIViewController {
             
         } catch FormError.textFieldIsEmpty (let tf){
             
+            UIView.animate(withDuration: 0.4, delay: 0, options: [.autoreverse], animations: {
+                tf.backgroundColor = UIColor.red
+            }, completion: nil)
+            
             let alert = UIAlertController(title: "Champs de texte vide", message: "Rempli ton formulaire", preferredStyle: .actionSheet)
             
             let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
@@ -71,7 +75,7 @@ class ViewController: UIViewController {
             alert.addAction(cancelAction)
             alert.addAction(destroyAction)
             
-            present(alert, animated: true, completion: nil)
+//            present(alert, animated: true, completion: nil)
             
         } catch FormError.textIsNotLongEnough {
         
