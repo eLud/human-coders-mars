@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum FormError: Error {
+    case textFieldIsEmpty
+    case textIsNotLongEnough
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
