@@ -68,7 +68,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restoCell" id="HXD-h1-D8j">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restoCell" id="HXD-h1-D8j" customClass="RestaurantCollectionViewCell" customModule="Resto" customModuleProvider="target">
                                 <rect key="frame" x="88" y="0.0" width="238" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -99,6 +99,11 @@
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" red="0.3921568627" green="0.81568627449999997" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="addressLabel" destination="ODz-dt-eCp" id="lAx-wV-8mx"/>
+                                    <outlet property="nameLabel" destination="ROd-DZ-mo3" id="hSx-ac-3Yq"/>
+                                    <outlet property="styleLabel" destination="8eG-eQ-hoO" id="z9B-iX-ma6"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
