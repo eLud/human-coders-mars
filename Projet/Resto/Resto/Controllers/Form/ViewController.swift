@@ -37,15 +37,16 @@ class ViewController: UIViewController {
     
     @IBAction func enregistre(_ sender: UIButton) {
         print("toto")
-        sender.isEnabled = false
-        let name = nameTextField.text
-        nameTextField.textColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+
     }
     
-    var father: Human?
-
     @IBAction func cancel(_ sender: UIButton) {
-        
+    
+    }
+    
+    fileprivate var father: Human?
+    
+    private func memoryLeakExample() {
         var toto = Human(name: "Père", picture: #imageLiteral(resourceName: "pere"))
         father = toto
         var son = Human(name: "Fils", picture: #imageLiteral(resourceName: "son"))
@@ -57,8 +58,7 @@ class ViewController: UIViewController {
 
 }
 
-
-class Human {
+fileprivate class Human {
     
     var name: String
     var profilePicture: UIImage
