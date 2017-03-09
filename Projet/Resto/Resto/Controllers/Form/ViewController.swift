@@ -11,6 +11,8 @@ import UIKit
 enum FormError: Error {
     case textFieldIsEmpty
     case textIsNotLongEnough
+    case undefined
+    case anotherUndefinedError
 }
 
 class ViewController: UIViewController {
@@ -45,14 +47,36 @@ class ViewController: UIViewController {
     
     @IBAction func enregistre(_ sender: UIButton) {
         
-        let result = try! restaurantFromForm()
-        
-//        guard let resto = result else {
-//            // Y'a un soucis dans le formulaire
-//            return
-//        }
-        
-        directory.add(result)
+        do {
+            let resto = try restaurantFromForm()
+            directory.add(resto)
+        } catch FormError.textFieldIsEmpty {
+            
+            let alert = UIAlertController(title: "Champs de texte vide", message: "Rempli ton formulaire", preferredStyle: .actionSheet)
+            
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                print("OK")
+            })
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+                print("Cancel")
+            })
+            
+            let destroyAction = UIAlertAction(title: "Destroy", style: .destructive, handler: { (action) in
+                print("Destroyed")
+            })
+            
+            alert.addAction(okAction)
+            alert.addAction(cancelAction)
+            alert.addAction(destroyAction)
+            
+            present(alert, animated: true, completion: nil)
+            
+        } catch FormError.textIsNotLongEnough {
+            
+        } catch {
+            
+        }
     }
     
     @IBAction func cancel(_ sender: UIButton) {
