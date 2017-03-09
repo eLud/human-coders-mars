@@ -13,4 +13,5 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var styleLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    
 }

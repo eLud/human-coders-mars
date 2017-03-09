@@ -16,6 +16,7 @@ class RestaurantDirectory {
     
     private init() {
         directory = []
+        demoData()
     }
     
     /// This adds a restaurant to the directory
@@ -39,5 +40,13 @@ class RestaurantDirectory {
         
         print("Je mange aliment dans dans")
         print("A", "B", separator: "-", terminator: ",")
+    }
+    
+    private func demoData() {
+        
+        for i in 0...100 {
+            let r = Restaurant(name: "Resto \(i)", address: "Adresse \(i)", isVisited: (i%2==0 ? (true):(false)), style: [], grade: (i%2==0 ? (4):(nil)), menu: [])
+            add(r)
+        }
     }
 }

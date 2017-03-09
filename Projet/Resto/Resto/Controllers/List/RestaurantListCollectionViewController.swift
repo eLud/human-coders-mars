@@ -38,13 +38,22 @@ class RestaurantListCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 100
+        return RestaurantDirectory.shared.list().count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "restoCell", for: indexPath)
     
-        // Configure the cell
+        if let c = cell as? RestaurantCollectionViewCell {
+            let resto = RestaurantDirectory.shared.list()[indexPath.row]
+            
+            c.nameLabel.text = resto.name
+            c.addressLabel.text = resto.address
+            if let firstStyle = resto.style.first?.rawValue {
+                c.styleLabel.text = firstStyle
+            }
+        }
     
         if indexPath.row%2 == 0 {
             cell.backgroundColor = UIColor.red

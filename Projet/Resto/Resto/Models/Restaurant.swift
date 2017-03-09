@@ -10,7 +10,7 @@ import Foundation
 
 struct Restaurant: Hashable, CustomStringConvertible  {
     
-    enum Style {
+    enum Style: String {
         case vegan
         case burger
         case takeAway
