@@ -351,6 +351,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oD4-23-qz7">
+                                <rect key="frame" x="181" y="217" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="touchId:" destination="S9Q-DL-ozn" eventType="touchUpInside" id="wOv-pB-UGd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cny-qJ-g7S">
+                                <rect key="frame" x="87" y="430" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -363,11 +375,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="restoAdressLabel" destination="gAv-7t-dRT" id="jVF-gV-qch"/>
+                        <outlet property="swiftImageView" destination="Cny-qJ-g7S" id="a2E-TV-Kg9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASc-eT-LfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1714" y="845"/>
+            <point key="canvasLocation" x="1713.0434782608697" y="844.56521739130437"/>
         </scene>
         <!--Upload-->
         <scene sceneID="56W-3h-Gov">
