@@ -68,7 +68,7 @@
                                     <outlet property="addressLabel" destination="ODz-dt-eCp" id="lAx-wV-8mx"/>
                                     <outlet property="nameLabel" destination="ROd-DZ-mo3" id="hSx-ac-3Yq"/>
                                     <outlet property="styleLabel" destination="8eG-eQ-hoO" id="z9B-iX-ma6"/>
-                                    <segue destination="S9Q-DL-ozn" kind="show" id="Vf5-eT-gtl">
+                                    <segue destination="S9Q-DL-ozn" kind="show" identifier="showDetails" id="Vf5-eT-gtl">
                                         <segue key="commit" inheritsFrom="parent" id="6dA-Kb-gzH"/>
                                         <segue key="preview" inheritsFrom="commit" id="hgB-RD-qil"/>
                                     </segue>
@@ -83,7 +83,7 @@
                     <navigationItem key="navigationItem" id="jdT-sQ-rM9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="apr-c6-q4X">
                             <connections>
-                                <segue destination="Op3-Fy-NpU" kind="presentation" id="Pgh-Qy-gAg"/>
+                                <segue destination="Op3-Fy-NpU" kind="presentation" identifier="showForm" id="Pgh-Qy-gAg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -336,7 +336,7 @@
         <!--Title-->
         <scene sceneID="wuX-Jz-psJ">
             <objects>
-                <viewController id="S9Q-DL-ozn" sceneMemberID="viewController">
+                <viewController id="S9Q-DL-ozn" customClass="RestaurantDetailsViewController" customModule="Resto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bPl-30-Dz5"/>
                         <viewControllerLayoutGuide type="bottom" id="Ngb-0P-59m"/>
@@ -345,19 +345,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Détails" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAv-7t-dRT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Détails" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAv-7t-dRT">
                                 <rect key="frame" x="181" y="358" width="53" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gAv-7t-dRT" firstAttribute="centerX" secondItem="HOH-MV-tpb" secondAttribute="centerX" id="DDN-07-tVr"/>
+                            <constraint firstItem="gAv-7t-dRT" firstAttribute="centerY" secondItem="HOH-MV-tpb" secondAttribute="centerY" id="Vwe-yH-rgY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="hyo-hs-y7C">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="CBJ-Zw-orE"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="restoAdressLabel" destination="gAv-7t-dRT" id="jVF-gV-qch"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASc-eT-LfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
