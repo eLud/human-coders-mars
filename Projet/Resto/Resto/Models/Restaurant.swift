@@ -13,7 +13,11 @@ struct Restaurant: Hashable, CustomStringConvertible  {
     enum Style: String {
         case vegan
         case burger
-        case takeAway
+        case takeAway = "Take Away"
+        
+        static var allCases: [Style] {
+            return [.vegan, .burger, .takeAway]
+        }
     }
     
     var name: String

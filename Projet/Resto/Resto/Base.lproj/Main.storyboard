@@ -277,10 +277,21 @@
                         <outlet property="noteLabel" destination="s4M-9B-xbd" id="EMD-He-scd"/>
                         <outlet property="noteSlider" destination="Con-Lp-eFr" id="Nmx-dS-Q9T"/>
                         <outlet property="noteStackView" destination="wCc-I9-6TI" id="Kg5-Ad-mFk"/>
+                        <outlet property="stylePickerView" destination="5m2-HE-pJN" id="EPm-BA-CgW"/>
+                        <outlet property="styleTextField" destination="s0e-u8-77T" id="ucV-MS-WRl"/>
                         <outlet property="visitedSwitch" destination="pRx-av-NOO" id="z0S-kZ-DGt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pickerView contentMode="scaleToFill" id="5m2-HE-pJN">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.92365598680000005" green="0.37113195659999998" blue="0.1652451009" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <connections>
+                        <outlet property="dataSource" destination="BYZ-38-t0r" id="oUa-SM-nOi"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="DXW-5f-5ZX"/>
+                    </connections>
+                </pickerView>
             </objects>
             <point key="canvasLocation" x="2621.739130434783" y="83.967391304347828"/>
         </scene>

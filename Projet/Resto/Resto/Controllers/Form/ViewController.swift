@@ -23,12 +23,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var noteSlider: UISlider!
     @IBOutlet weak var visitedSwitch: UISwitch!
+    @IBOutlet weak var styleTextField: UITextField!
+    @IBOutlet weak var stylePickerView: UIPickerView!
     
     var directory = RestaurantDirectory.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        styleTextField.inputView = stylePickerView
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,6 +103,25 @@ class ViewController: UIViewController {
         
         father?.children = son
         son.father = father
+    }
+}
+
+extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return Restaurant.Style.allCases.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Restaurant.Style.allCases[row].rawValue.capitalized
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        styleTextField.text = Restaurant.Style.allCases[row].rawValue
     }
 }
 
