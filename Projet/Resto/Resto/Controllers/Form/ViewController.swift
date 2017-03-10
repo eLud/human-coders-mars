@@ -69,6 +69,10 @@ class ViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func backViewWasTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(false)
+    }
+    
     private func restaurantFromForm() throws -> Restaurant {
         
         guard let name = nameTextField.text, !name.isEmpty else {

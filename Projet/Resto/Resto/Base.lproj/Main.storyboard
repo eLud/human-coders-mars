@@ -36,7 +36,7 @@
                                             <rect key="frame" x="8" y="8" width="102" height="174"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROd-DZ-mo3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="37" height="40"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="36.333333333333336" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-eQ-hoO">
-                                                    <rect key="frame" x="0.0" y="80" width="39" height="40"/>
+                                                    <rect key="frame" x="0.0" y="80" width="38.333333333333336" height="40"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -153,7 +153,7 @@
                                                 <rect key="frame" x="53" y="0.0" width="321" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -263,6 +263,9 @@
                             <constraint firstItem="yXC-p8-EQI" firstAttribute="top" secondItem="PKT-XI-HJN" secondAttribute="bottom" constant="8" id="qYm-FQ-klb"/>
                             <constraint firstItem="SDy-g9-4q4" firstAttribute="centerX" secondItem="yXC-p8-EQI" secondAttribute="centerX" id="ycV-dB-tK3"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="6zN-aZ-8P2" appends="YES" id="Ywb-3q-PjI"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="gfe-9m-rkH">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dMv-8c-7v6">
@@ -292,6 +295,11 @@
                         <outlet property="delegate" destination="BYZ-38-t0r" id="DXW-5f-5ZX"/>
                     </connections>
                 </pickerView>
+                <tapGestureRecognizer id="6zN-aZ-8P2">
+                    <connections>
+                        <action selector="backViewWasTapped:" destination="BYZ-38-t0r" id="GrQ-Kx-Hje"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2621.739130434783" y="83.967391304347828"/>
         </scene>
@@ -307,7 +315,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="adK-Iv-qnf">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="adK-Iv-qnf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </mapView>
                         </subviews>
@@ -388,6 +396,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ijd-k0-rJd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="QtM-nP-hDs">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
