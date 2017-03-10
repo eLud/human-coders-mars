@@ -83,7 +83,7 @@
                     <navigationItem key="navigationItem" id="jdT-sQ-rM9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="apr-c6-q4X">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="Pgh-Qy-gAg"/>
+                                <segue destination="Op3-Fy-NpU" kind="presentation" id="Pgh-Qy-gAg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -105,21 +105,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qi-Bi-tQP">
-                                <rect key="frame" x="360" y="20" width="34" height="30"/>
+                                <rect key="frame" x="360" y="64" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="enregistre:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XdV-Wp-P96"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKT-XI-HJN">
-                                <rect key="frame" x="20" y="20" width="48" height="30"/>
+                                <rect key="frame" x="20" y="64" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="80W-Lu-0ke"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yXC-p8-EQI">
-                                <rect key="frame" x="20" y="58" width="374" height="429"/>
+                                <rect key="frame" x="20" y="102" width="374" height="429"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="abq-eA-sxH">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="68"/>
@@ -241,7 +241,7 @@
                                 </subviews>
                             </stackView>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDy-g9-4q4">
-                                <rect key="frame" x="183.66666666666666" y="495" width="46" height="30"/>
+                                <rect key="frame" x="183.66666666666666" y="539" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="zXF-70-byQ" kind="presentation" id="SrA-J4-CNc"/>
@@ -264,6 +264,13 @@
                             <constraint firstItem="SDy-g9-4q4" firstAttribute="centerX" secondItem="yXC-p8-EQI" secondAttribute="centerX" id="ycV-dB-tK3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gfe-9m-rkH">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dMv-8c-7v6">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="mfQ-YE-Iia"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="QRh-7O-j7I" id="bxu-W6-bci"/>
                         <outlet property="nameTextField" destination="fPe-6V-dUX" id="aah-09-OBV"/>
@@ -275,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1714.4927536231885" y="83.967391304347828"/>
+            <point key="canvasLocation" x="2621.739130434783" y="83.967391304347828"/>
         </scene>
         <!--Carte-->
         <scene sceneID="7Ew-0k-Oqc">
@@ -343,7 +350,7 @@
                 <viewControllerPlaceholder storyboardName="Upload" id="zXF-70-byQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yC7-HW-vWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2482.608695652174" y="83.559782608695656"/>
+            <point key="canvasLocation" x="3389.130434782609" y="83.152173913043484"/>
         </scene>
         <!--Liste-->
         <scene sceneID="V9c-oV-tMq">
@@ -382,8 +389,26 @@
             </objects>
             <point key="canvasLocation" x="-881.15942028985512" y="83.967391304347828"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gXV-tf-CKj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Op3-Fy-NpU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ttS-Ct-LWQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MbK-kc-YJu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ec8-UV-HuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1714.4927536231885" y="83.967391304347828"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hgB-RD-qil"/>
+        <segue reference="Vf5-eT-gtl"/>
     </inferredMetricsTieBreakers>
 </document>

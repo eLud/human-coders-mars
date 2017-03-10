@@ -10,14 +10,18 @@ import UIKit
 
 class RestaurantListCollectionViewController: UICollectionViewController {    
     
+    
+    // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Do any additional setup after loading the view.
+        let notCenter = NotificationCenter.default
+//        notCenter.addObserver(self, selector: #selector(updateData(_:)), name: NSNotification.Name(Constants.Notifications.modelUpdated), object: nil)
         
+        notCenter.addObserver(forName: NSNotification.Name(Constants.Notifications.modelUpdated), object: nil, queue: OperationQueue.main) { (note) in
+            self.collectionView?.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,6 +32,17 @@ class RestaurantListCollectionViewController: UICollectionViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
+        collectionView?.reloadData()
+    }
+    
+    deinit {
+        //Inutile à partir d'iOS 9, mais obligatoire avant
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    // MARK: - Utilities
+    
+    func updateData(_ note: Notification) {
         collectionView?.reloadData()
     }
 
@@ -41,7 +56,7 @@ class RestaurantListCollectionViewController: UICollectionViewController {
     }
     */
 
-    // MARK: UICollectionViewDataSource
+    // MARK: - UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
@@ -67,7 +82,7 @@ class RestaurantListCollectionViewController: UICollectionViewController {
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
+    // MARK: - UICollectionViewDelegate
 
     
     /*

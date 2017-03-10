@@ -16,14 +16,19 @@ class RestaurantDirectory {
     
     private init() {
         directory = []
-        demoData()
+//        demoData()
     }
     
     /// This adds a restaurant to the directory
     /// - parameter restaurant
     ///  The restaurant to add
     func add(_ restaurant: Restaurant) {
+        
         directory.append(restaurant)
+        
+        // Notifier les controleurs
+        let notCenter = NotificationCenter.default
+        notCenter.post(name: NSNotification.Name(Constants.Notifications.modelUpdated), object: self)
     }
     
     func list() -> [Restaurant] {
