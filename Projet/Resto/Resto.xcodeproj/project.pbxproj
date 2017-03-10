@@ -11,6 +11,8 @@
 		33040E811E71998E00E8C1DA /* RestaurantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33040E801E71995400E8C1DA /* RestaurantCollectionViewCell.swift */; };
 		33040EB21E72A4A400E8C1DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33040EB11E72A4A400E8C1DA /* Constants.swift */; };
 		33040EB71E72E6AA00E8C1DA /* RestaurantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33040EB61E72E6AA00E8C1DA /* RestaurantDetailsViewController.swift */; };
+		33040EBF1E730B3F00E8C1DA /* RestoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33040EBE1E730B3F00E8C1DA /* RestoTests.swift */; };
+		33040ECD1E7310D800E8C1DA /* RestoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33040ECC1E7310D800E8C1DA /* RestoUITests.swift */; };
 		335EB7751E70524C00DC6626 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335EB7741E70524C00DC6626 /* MapKit.framework */; };
 		335EB77A1E70650B00DC6626 /* Upload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 335EB7791E70650A00DC6626 /* Upload.storyboard */; };
 		335EB78C1E7069B700DC6626 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335EB78A1E7069B700DC6626 /* ViewController.swift */; };
@@ -27,11 +29,34 @@
 		33A780471E6EEB870063B96E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A780451E6EEB870063B96E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		33040EC11E730B3F00E8C1DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33A780311E6EEB870063B96E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33A780381E6EEB870063B96E;
+			remoteInfo = Resto;
+		};
+		33040ECF1E7310D800E8C1DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33A780311E6EEB870063B96E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33A780381E6EEB870063B96E;
+			remoteInfo = Resto;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		33040E7E1E718FBA00E8C1DA /* RestaurantListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantListCollectionViewController.swift; sourceTree = "<group>"; };
 		33040E801E71995400E8C1DA /* RestaurantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewCell.swift; sourceTree = "<group>"; };
 		33040EB11E72A4A400E8C1DA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		33040EB61E72E6AA00E8C1DA /* RestaurantDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsViewController.swift; sourceTree = "<group>"; };
+		33040EBC1E730B3F00E8C1DA /* RestoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33040EBE1E730B3F00E8C1DA /* RestoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoTests.swift; sourceTree = "<group>"; };
+		33040EC01E730B3F00E8C1DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33040ECA1E7310D800E8C1DA /* RestoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33040ECC1E7310D800E8C1DA /* RestoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoUITests.swift; sourceTree = "<group>"; };
+		33040ECE1E7310D800E8C1DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		335EB7741E70524C00DC6626 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		335EB7791E70650A00DC6626 /* Upload.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Upload.storyboard; sourceTree = "<group>"; };
 		335EB78A1E7069B700DC6626 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +76,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		33040EB91E730B3F00E8C1DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33040EC71E7310D800E8C1DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33A780361E6EEB870063B96E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,6 +116,24 @@
 				33040EB61E72E6AA00E8C1DA /* RestaurantDetailsViewController.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		33040EBD1E730B3F00E8C1DA /* RestoTests */ = {
+			isa = PBXGroup;
+			children = (
+				33040EBE1E730B3F00E8C1DA /* RestoTests.swift */,
+				33040EC01E730B3F00E8C1DA /* Info.plist */,
+			);
+			path = RestoTests;
+			sourceTree = "<group>";
+		};
+		33040ECB1E7310D800E8C1DA /* RestoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				33040ECC1E7310D800E8C1DA /* RestoUITests.swift */,
+				33040ECE1E7310D800E8C1DA /* Info.plist */,
+			);
+			path = RestoUITests;
 			sourceTree = "<group>";
 		};
 		335EB7731E70524C00DC6626 /* Frameworks */ = {
@@ -153,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				33A7803B1E6EEB870063B96E /* Resto */,
+				33040EBD1E730B3F00E8C1DA /* RestoTests */,
+				33040ECB1E7310D800E8C1DA /* RestoUITests */,
 				33A7803A1E6EEB870063B96E /* Products */,
 				335EB7731E70524C00DC6626 /* Frameworks */,
 			);
@@ -162,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				33A780391E6EEB870063B96E /* Resto.app */,
+				33040EBC1E730B3F00E8C1DA /* RestoTests.xctest */,
+				33040ECA1E7310D800E8C1DA /* RestoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +248,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		33040EBB1E730B3F00E8C1DA /* RestoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33040EC31E730B3F00E8C1DA /* Build configuration list for PBXNativeTarget "RestoTests" */;
+			buildPhases = (
+				33040EB81E730B3F00E8C1DA /* Sources */,
+				33040EB91E730B3F00E8C1DA /* Frameworks */,
+				33040EBA1E730B3F00E8C1DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33040EC21E730B3F00E8C1DA /* PBXTargetDependency */,
+			);
+			name = RestoTests;
+			productName = RestoTests;
+			productReference = 33040EBC1E730B3F00E8C1DA /* RestoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		33040EC91E7310D800E8C1DA /* RestoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33040ED11E7310D800E8C1DA /* Build configuration list for PBXNativeTarget "RestoUITests" */;
+			buildPhases = (
+				33040EC61E7310D800E8C1DA /* Sources */,
+				33040EC71E7310D800E8C1DA /* Frameworks */,
+				33040EC81E7310D800E8C1DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33040ED01E7310D800E8C1DA /* PBXTargetDependency */,
+			);
+			name = RestoUITests;
+			productName = RestoUITests;
+			productReference = 33040ECA1E7310D800E8C1DA /* RestoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		33A780381E6EEB870063B96E /* Resto */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33A7804B1E6EEB870063B96E /* Build configuration list for PBXNativeTarget "Resto" */;
@@ -215,6 +312,18 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ludovic Ollagnier";
 				TargetAttributes = {
+					33040EBB1E730B3F00E8C1DA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = A7SGM6JEMA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 33A780381E6EEB870063B96E;
+					};
+					33040EC91E7310D800E8C1DA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = A7SGM6JEMA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 33A780381E6EEB870063B96E;
+					};
 					33A780381E6EEB870063B96E = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = A7SGM6JEMA;
@@ -244,11 +353,27 @@
 			projectRoot = "";
 			targets = (
 				33A780381E6EEB870063B96E /* Resto */,
+				33040EBB1E730B3F00E8C1DA /* RestoTests */,
+				33040EC91E7310D800E8C1DA /* RestoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		33040EBA1E730B3F00E8C1DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33040EC81E7310D800E8C1DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33A780371E6EEB870063B96E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +405,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		33040EB81E730B3F00E8C1DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33040EBF1E730B3F00E8C1DA /* RestoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33040EC61E7310D800E8C1DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33040ECD1E7310D800E8C1DA /* RestoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33A780351E6EEB870063B96E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +442,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		33040EC21E730B3F00E8C1DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33A780381E6EEB870063B96E /* Resto */;
+			targetProxy = 33040EC11E730B3F00E8C1DA /* PBXContainerItemProxy */;
+		};
+		33040ED01E7310D800E8C1DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33A780381E6EEB870063B96E /* Resto */;
+			targetProxy = 33040ECF1E7310D800E8C1DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		33A780401E6EEB870063B96E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -321,6 +475,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		33040EC41E730B3F00E8C1DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				INFOPLIST_FILE = RestoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tectec.RestoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Resto.app/Resto";
+			};
+			name = Debug;
+		};
+		33040EC51E730B3F00E8C1DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				INFOPLIST_FILE = RestoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tectec.RestoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Resto.app/Resto";
+			};
+			name = Release;
+		};
+		33040ED21E7310D800E8C1DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				INFOPLIST_FILE = RestoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tectec.RestoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Resto;
+			};
+			name = Debug;
+		};
+		33040ED31E7310D800E8C1DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				INFOPLIST_FILE = RestoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tectec.RestoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Resto;
+			};
+			name = Release;
+		};
 		33A780491E6EEB870063B96E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -447,6 +655,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		33040EC31E730B3F00E8C1DA /* Build configuration list for PBXNativeTarget "RestoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33040EC41E730B3F00E8C1DA /* Debug */,
+				33040EC51E730B3F00E8C1DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		33040ED11E7310D800E8C1DA /* Build configuration list for PBXNativeTarget "RestoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33040ED21E7310D800E8C1DA /* Debug */,
+				33040ED31E7310D800E8C1DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		33A780341E6EEB870063B96E /* Build configuration list for PBXProject "Resto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
